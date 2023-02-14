@@ -6,7 +6,7 @@
 /*   By: kalshaer <kalshaer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 09:49:50 by kalshaer          #+#    #+#             */
-/*   Updated: 2023/02/14 08:07:30 by kalshaer         ###   ########.fr       */
+/*   Updated: 2023/02/14 11:43:35 by kalshaer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,13 +84,19 @@ void	exit_function(t_list *a_stack, t_list *b_stack, int i)
 	(void) a_stack;
 	(void) b_stack;
 	if (i == 1)
+	{
 		write(2, "Error\n", 6);
+		exit(1);
+	}
 	else if (i == 2)
+	{
 		freestack(a_stack);
+		exit(1);
+	}
 	else if (i == 3)
 	{
 		freestack(a_stack);
 		freestack(b_stack);
+		return;
 	}
-	exit(1);
 }

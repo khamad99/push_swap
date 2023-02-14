@@ -6,7 +6,7 @@
 /*   By: kalshaer <kalshaer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 14:50:40 by kalshaer          #+#    #+#             */
-/*   Updated: 2023/02/14 08:23:51 by kalshaer         ###   ########.fr       */
+/*   Updated: 2023/02/14 11:44:16 by kalshaer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,4 +33,5 @@ int	main(int argc, char **argv)
 	order(a_stack, temp, ft_lstsize(a_stack), 0);
 	sort(&a_stack, &b_stack, newargc);
 	exit_function(a_stack, b_stack, 3);
+	return (0);
 }

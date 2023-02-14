@@ -6,7 +6,7 @@
 /*   By: kalshaer <kalshaer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 21:29:41 by kalshaer          #+#    #+#             */
-/*   Updated: 2023/02/14 08:09:34 by kalshaer         ###   ########.fr       */
+/*   Updated: 2023/02/14 11:41:19 by kalshaer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,11 @@ char	**joinn(int argc, char **argv)
 	char	**newargv;
 	int		i;
 
+	if (!argv[1][0])
+	{
+		write(2, "Error\n", 6);
+		exit(1);
+	}
 	r = argv[1];
 	i = 1;
 	while (++i < argc)
