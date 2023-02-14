@@ -1,35 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   checker_utils_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kalshaer <kalshaer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/24 09:04:48 by kalshaer          #+#    #+#             */
-/*   Updated: 2023/02/14 17:10:54 by kalshaer         ###   ########.fr       */
+/*   Created: 2023/01/24 21:15:08 by kalshaer          #+#    #+#             */
+/*   Updated: 2023/02/14 22:32:18 by kalshaer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "checker.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+int	issorted(t_list *stak)
 {
-	size_t	i;
-
-	i = 0;
-	while (i < n)
+	t_list	*temp;
+	
+	temp = stak;
+	while (temp->next)
 	{
-		if (s1[i] != 0 && s1[i] == s2[i])
-		{
-			while (s1[i] != 0 && s1[i] == s2[i] && i < n)
-			i++;
-		}
-		else if (((unsigned char) s1[i] - (unsigned char) s2[i]) < 0)
-			return (-1);
-		else if (((unsigned char) s1[i] - (unsigned char) s2[i]) > 0)
-			return (1);
-		else
+		if(temp->num > temp->next->num)
 			return (0);
+		temp = temp->next;
 	}
-	return (0);
+	return (1);
 }

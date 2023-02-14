@@ -1,35 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   checker_freearg_bonus.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kalshaer <kalshaer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/24 09:04:48 by kalshaer          #+#    #+#             */
-/*   Updated: 2023/02/14 17:10:54 by kalshaer         ###   ########.fr       */
+/*   Created: 2023/02/13 11:13:39 by kalshaer          #+#    #+#             */
+/*   Updated: 2023/02/14 22:27:57 by kalshaer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+# include "checker.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+void	freearg(char **argv)
 {
-	size_t	i;
+	int	i;
 
 	i = 0;
-	while (i < n)
+	while (argv[i])
+		free(argv[i++]);
+	free(argv);
+}
+
+void	freestack(t_list *stack)
+{
+	t_list	*temp;
+
+	while (stack)
 	{
-		if (s1[i] != 0 && s1[i] == s2[i])
-		{
-			while (s1[i] != 0 && s1[i] == s2[i] && i < n)
-			i++;
-		}
-		else if (((unsigned char) s1[i] - (unsigned char) s2[i]) < 0)
-			return (-1);
-		else if (((unsigned char) s1[i] - (unsigned char) s2[i]) > 0)
-			return (1);
-		else
-			return (0);
+		temp = stack;
+		stack = stack->next;
+		free(temp);
 	}
-	return (0);
 }

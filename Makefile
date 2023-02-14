@@ -6,7 +6,7 @@
 #    By: kalshaer <kalshaer@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/18 14:57:31 by kalshaer          #+#    #+#              #
-#    Updated: 2023/02/14 14:32:04 by kalshaer         ###   ########.fr        #
+#    Updated: 2023/02/14 22:34:15 by kalshaer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,15 +31,15 @@ SRCS	=	push_swap_main.c \
 			freearg.c \
 			sort_utils.c \
 
-SRCS_B	=	checker_error.c \
-			checker_push_swap_main.c \
-			checker_push_swap_utils.c \
-			checker_intiate.c \
-			checker_push.c \
-			checker_r_rotate.c \
-			checker_rotate.c \
-			checker_swap.c \
-			checker_freearg.c \
+SRCS_B	=	checker_error_bonus.c \
+			checker_main_bonus.c \
+			checker_utils_bonus.c \
+			checker_intiate_bonus.c \
+			checker_push_bonus.c \
+			checker_r_rotate_bonus.c \
+			checker_rotate_bonus.c \
+			checker_swap_bonus.c \
+			checker_freearg_bonus.c \
 
 OBJS	=	$(SRCS:%.c=%.o)
 
