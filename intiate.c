@@ -6,11 +6,26 @@
 /*   By: kalshaer <kalshaer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 21:29:41 by kalshaer          #+#    #+#             */
-/*   Updated: 2023/02/14 12:06:22 by kalshaer         ###   ########.fr       */
+/*   Updated: 2023/02/14 12:49:09 by kalshaer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+static void	checkinvalid(int argc, char **argv)
+{
+	int	i2;
+
+	i2 = 0;
+	while (++i2 <= argc - 1)
+	{
+		if (!argv[i2][0])
+		{
+			write(2, "Error\n", 6);
+			exit(1);
+		}
+	}
+}
 
 char	**joinn(int argc, char **argv)
 {
@@ -18,11 +33,7 @@ char	**joinn(int argc, char **argv)
 	char	**newargv;
 	int		i;
 
-	if (!argv[1][0] && !argv[2])
-	{
-		write(2, "Error\n", 6);
-		exit(1);
-	}
+	checkinvalid(argc, argv);
 	r = argv[1];
 	i = 1;
 	while (++i < argc)
