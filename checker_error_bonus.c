@@ -6,7 +6,7 @@
 /*   By: kalshaer <kalshaer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 09:49:50 by kalshaer          #+#    #+#             */
-/*   Updated: 2023/02/14 22:27:52 by kalshaer         ###   ########.fr       */
+/*   Updated: 2023/02/15 08:46:56 by kalshaer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 static int	issign(char c)
 {
 	if (c == '-' || c == '+')
-		return 1;
-	return 0;
+		return (1);
+	return (0);
 }
 
 static int	issdigit(char **argv)
