@@ -6,7 +6,7 @@
 /*   By: kalshaer <kalshaer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 21:08:19 by kalshaer          #+#    #+#             */
-/*   Updated: 2023/02/14 09:48:16 by kalshaer         ###   ########.fr       */
+/*   Updated: 2023/02/15 09:06:23 by kalshaer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,15 +22,14 @@ static void	swap(t_list **stack)
 	*stack = (*stack)->next;
 	(*stack)->next = temp;
 	(*stack)->next->next = temp2;
-
 }
 
 void	swap_ss(t_list **stack, t_list **stack2)
 {
 	if (ft_lstsize(*stack) < 2)
-		return;
+		return ;
 	if (ft_lstsize(*stack2) < 2)
-		return;
+		return ;
 	swap(stack);
 	swap(stack2);
 	reposition(stack);
@@ -41,7 +40,7 @@ void	swap_ss(t_list **stack, t_list **stack2)
 void	swap_a(t_list **stack)
 {
 	if (ft_lstsize(*stack) < 2)
-		return;
+		return ;
 	swap(stack);
 	reposition(stack);
 	ft_printf("sa\n");
@@ -50,7 +49,7 @@ void	swap_a(t_list **stack)
 void	swap_b(t_list **stack)
 {
 	if (ft_lstsize(*stack) < 2)
-		return;
+		return ;
 	swap(stack);
 	reposition(stack);
 	ft_printf("sb\n");

@@ -6,11 +6,11 @@
 /*   By: kalshaer <kalshaer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 09:49:50 by kalshaer          #+#    #+#             */
-/*   Updated: 2023/02/15 08:46:56 by kalshaer         ###   ########.fr       */
+/*   Updated: 2023/02/15 08:51:12 by kalshaer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "checker.h"
+#include "checker.h"
 
 static int	issign(char c)
 {
@@ -34,11 +34,11 @@ static int	issdigit(char **argv)
 			while (argv[i2][i] && issign(argv[i2][i]))
 				i++;
 			if (!ft_isdigit(argv[i2][i++]))
-				return 0;
+				return (0);
 		}
 		i2++;
 	}
-	return 1;
+	return (1);
 }
 
 static int	isnotdublicat(char **argv)
@@ -61,7 +61,7 @@ static int	isnotdublicat(char **argv)
 		}
 		i++;
 	}
-	return 0;
+	return (0);
 }
 
 int	errorh(char **argv)
@@ -76,7 +76,7 @@ int	errorh(char **argv)
 		freearg(argv);
 		return (1);
 	}
-	return 0;
+	return (0);
 }
 
 void	exit_function(t_list *a_stack, t_list *b_stack, int i)
@@ -97,6 +97,6 @@ void	exit_function(t_list *a_stack, t_list *b_stack, int i)
 	{
 		freestack(a_stack);
 		freestack(b_stack);
-		return;
+		return ;
 	}
 }

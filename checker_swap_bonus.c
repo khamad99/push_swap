@@ -6,7 +6,7 @@
 /*   By: kalshaer <kalshaer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 21:08:19 by kalshaer          #+#    #+#             */
-/*   Updated: 2023/02/14 22:31:45 by kalshaer         ###   ########.fr       */
+/*   Updated: 2023/02/15 08:53:56 by kalshaer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ static void	swap(t_list **stack)
 void	swap_ss(t_list **stack, t_list **stack2)
 {
 	if (ft_lstsize(*stack) < 2)
-		return;
+		return ;
 	if (ft_lstsize(*stack2) < 2)
-		return;
+		return ;
 	swap(stack);
 	swap(stack2);
 }
@@ -37,13 +37,13 @@ void	swap_ss(t_list **stack, t_list **stack2)
 void	swap_a(t_list **stack)
 {
 	if (ft_lstsize(*stack) < 2)
-		return;
+		return ;
 	swap(stack);
 }
 
 void	swap_b(t_list **stack)
 {
 	if (ft_lstsize(*stack) < 2)
-		return;
+		return ;
 	swap(stack);
 }

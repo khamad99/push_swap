@@ -6,7 +6,7 @@
 /*   By: kalshaer <kalshaer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 21:44:37 by kalshaer          #+#    #+#             */
-/*   Updated: 2023/02/14 22:30:34 by kalshaer         ###   ########.fr       */
+/*   Updated: 2023/02/15 08:53:29 by kalshaer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static void	r_rotate(t_list **stack)
 	size = ft_lstsize(*stack);
 	beforelast = *stack;
 	i = 1;
-	while (i++ < size-1)
+	while (i++ < size - 1)
 		beforelast = beforelast->next;
 	last = ft_lstlast(*stack);
 	beforelast->next = 0;

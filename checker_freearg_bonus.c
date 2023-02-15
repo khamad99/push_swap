@@ -6,11 +6,11 @@
 /*   By: kalshaer <kalshaer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 11:13:39 by kalshaer          #+#    #+#             */
-/*   Updated: 2023/02/14 22:27:57 by kalshaer         ###   ########.fr       */
+/*   Updated: 2023/02/15 08:51:22 by kalshaer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "checker.h"
+#include "checker.h"
 
 void	freearg(char **argv)
 {

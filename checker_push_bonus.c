@@ -6,7 +6,7 @@
 /*   By: kalshaer <kalshaer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 09:33:46 by kalshaer          #+#    #+#             */
-/*   Updated: 2023/02/14 22:34:48 by kalshaer         ###   ########.fr       */
+/*   Updated: 2023/02/15 08:53:06 by kalshaer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,19 +19,19 @@ static void	push(t_list **stack, t_list **stack2)
 	temp = *stack;
 	*stack = (*stack)->next;
 	temp->next = NULL;
-	ft_lstadd_front(stack2,temp);
+	ft_lstadd_front(stack2, temp);
 }
 
 void	push_b(t_list **stack, t_list **stack2)
 {
 	if (!stack)
-		return;
+		return ;
 	push(stack, stack2);
 }
 
 void	push_a(t_list **stack2, t_list **stack)
 {
 	if (!stack2)
-		return;
+		return ;
 	push(stack2, stack);
 }

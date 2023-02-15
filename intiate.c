@@ -6,7 +6,7 @@
 /*   By: kalshaer <kalshaer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 21:29:41 by kalshaer          #+#    #+#             */
-/*   Updated: 2023/02/14 12:49:09 by kalshaer         ###   ########.fr       */
+/*   Updated: 2023/02/15 09:33:37 by kalshaer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,17 @@ static void	checkinvalid(int argc, char **argv)
 			write(2, "Error\n", 6);
 			exit(1);
 		}
+	}
+	i2 = 0;
+	while (argv[1][i2])
+	{
+		if (argv[1][i2++] != ' ')
+			break ;
+		else if (argv[1][i2] == 0)
+		{
+			write(2, "Error\n", 6);
+			exit(1);
+		}	
 	}
 }
 

@@ -6,13 +6,11 @@
 /*   By: kalshaer <kalshaer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 21:13:25 by kalshaer          #+#    #+#             */
-/*   Updated: 2023/02/14 08:31:18 by kalshaer         ###   ########.fr       */
+/*   Updated: 2023/02/15 08:57:45 by kalshaer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-
 
 static void	rotate(t_list **stack)
 {

@@ -6,7 +6,7 @@
 /*   By: kalshaer <kalshaer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 14:50:40 by kalshaer          #+#    #+#             */
-/*   Updated: 2023/02/14 22:29:19 by kalshaer         ###   ########.fr       */
+/*   Updated: 2023/02/15 08:52:02 by kalshaer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ int	main(int argc, char **argv)
 	b_stack = NULL;
 	argv = joinn(argc, argv);
 	if (errorh(argv))
-	 	exit_function(a_stack, b_stack, 1);
+		exit_function(a_stack, b_stack, 1);
 	intiate(&newargc, argv, &a_stack);
 	if (issorted(a_stack))
 		exit_function(a_stack, b_stack, 2);
