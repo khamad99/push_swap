@@ -6,7 +6,7 @@
 /*   By: kalshaer <kalshaer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 14:50:40 by kalshaer          #+#    #+#             */
-/*   Updated: 2023/02/15 08:52:02 by kalshaer         ###   ########.fr       */
+/*   Updated: 2023/02/16 11:21:33 by kalshaer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,14 +66,16 @@ int	main(int argc, char **argv)
 	int		newargc;
 	char	*move;
 
-	if (argc <= 1)
-		return (0);
-	move = get_next_line(0);
-	if (move == 0)
+	move = 0;
+	if (argc > 1)
+	{
+		argv = joinn(argc, argv);
+		move = get_next_line(0);
+	}
+	else if (argc <= 1)
 		return (0);
 	a_stack = NULL;
 	b_stack = NULL;
-	argv = joinn(argc, argv);
 	if (errorh(argv))
 		exit_function(a_stack, b_stack, 1);
 	intiate(&newargc, argv, &a_stack);
