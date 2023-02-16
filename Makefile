@@ -6,15 +6,13 @@
 #    By: kalshaer <kalshaer@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/18 14:57:31 by kalshaer          #+#    #+#              #
-#    Updated: 2023/02/14 22:34:15 by kalshaer         ###   ########.fr        #
+#    Updated: 2023/02/16 14:16:51 by kalshaer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 LIBFT	=	./libft/libft.a
 
 NAME	=	push_swap
-
-NAME_B	=	checker
 
 SRCS	=	push_swap_main.c \
 			error.c \
@@ -31,41 +29,27 @@ SRCS	=	push_swap_main.c \
 			freearg.c \
 			sort_utils.c \
 
-SRCS_B	=	checker_error_bonus.c \
-			checker_main_bonus.c \
-			checker_utils_bonus.c \
-			checker_intiate_bonus.c \
-			checker_push_bonus.c \
-			checker_r_rotate_bonus.c \
-			checker_rotate_bonus.c \
-			checker_swap_bonus.c \
-			checker_freearg_bonus.c \
-
 OBJS	=	$(SRCS:%.c=%.o)
-
-OBJS_B	=	$(SRCS_B:%.c=%.o)
 
 FLAGS	=	-Wall -Werror -Wextra
 
 CC		=	cc
 
-$(NAME):
-	$(MAKE) -C ./libft
-	$(CC) $(FLAGS) -c $(SRCS)  
+.c.o:
+	$(CC) $(FLAGS) -c $< -o $(<:.c=.o)
+
+$(NAME): $(OBJS)
+	$(MAKE) -C ./libft  
 	$(CC) $(FLAGS) $(OBJS) $(LIBFT) -o $(NAME)
 
 all: $(NAME)
 
-bonus:
-	$(MAKE) -C ./libft
-	$(CC) $(FLAGS) -c $(SRCS_B)  
-	$(CC) $(FLAGS) $(OBJS_B) $(LIBFT) -o $(NAME_B)
-
 clean:
 	$(MAKE) clean -C ./libft
-	rm -f $(OBJS) $(OBJS_B)
+	rm -f $(OBJS)
 
 fclean: clean
 	$(MAKE) fclean -C ./libft
-	rm -f $(NAME) $(NAME_B)
+	rm -f $(NAME)
+
 re: fclean all

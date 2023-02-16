@@ -6,7 +6,7 @@
 /*   By: kalshaer <kalshaer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/24 09:12:50 by kalshaer          #+#    #+#             */
-/*   Updated: 2023/02/14 17:10:47 by kalshaer         ###   ########.fr       */
+/*   Updated: 2023/02/16 14:09:19 by kalshaer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,11 @@
 
 typedef struct t_type
 {
-	int	space;
-	int	hash;
-	int	plus;
-	int	check;
+	void	*content;
+	int		space;
+	int		hash;
+	int		plus;
+	int		check;
 }	t_type;
 
 typedef struct s_list
